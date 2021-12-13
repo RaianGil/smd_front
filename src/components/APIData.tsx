@@ -1,15 +1,12 @@
 import React, {useEffect, useState} from "react";
 import Loading from "../components/Loading";
-import { DTConfig } from "../models/DTConfig";
 import { STConfig } from "../models/STConfig";
 import { STBot } from "../models/STBot";
 import { DTBot } from "../models/DTBot";
-import * as DTConfigService from "../controllers/DTConfigService";
 import * as STConfigService from "../controllers/STConfigService";
 import * as STBotService from "../controllers/STBotService";
 import * as DTBotService from "../controllers/DTBotService";
 import STConfigList from "./STConfigList";
-import DTConfigList from "./DTConfigList";
 import STBotList from "./STBotList";
 import DTBotList from "./DTBotList";
 
@@ -36,7 +33,7 @@ const STConfigAPI = () => {
 }
 
 const DTConfigAPI = () => {
-    let [loading, setLoading] = useState(true)
+    /*let [loading, setLoading] = useState(true)
     let [dtConfigs, setdtConfigs] = useState<DTConfig[]>([])
     //
     let loadDTConfig = async () =>{
@@ -54,7 +51,7 @@ const DTConfigAPI = () => {
             <Loading />
         )
     //
-    return( <DTConfigList DTConfig={dtConfigs}/> )
+    return( <DTConfigList DTConfig={dtConfigs}/> )*/
 }
 
 const DTBotAPI = () => {

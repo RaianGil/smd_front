@@ -1,6 +1,6 @@
 import { createStore } from "redux"
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { DTConfig } from "./models/DTConfig";
+import { DTConfig } from "../models/DTConfig";
 
 const initStatemant = {
     ConfigDT: []
