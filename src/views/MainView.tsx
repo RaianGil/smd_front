@@ -1,8 +1,11 @@
 import React from 'react'
 import {Link } from 'react-router-dom'
+import GETServer from "../store/dispatchs/DTConfigDispatch";
+
 
 
 const MainView = () => {
+    GETServer()
     return(
     <div className="">
         <h1>Main Menu</h1>

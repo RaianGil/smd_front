@@ -1,8 +1,17 @@
 import { combineReducers } from "redux"
+import { persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+
 import DTBotReducer from "./DTBotReducer"
 import DTConfigReducer from "./DTConfigReducer"
 import STBotReducer from "./STBotReducer"
 import STConfigReducer from "./STConfigReducer"
+
+const persistConfig = {
+    key: 'root',
+    storage,
+    whitelist: ['DTConfig']
+}
 
 const reducers = combineReducers({
     DTBot: DTBotReducer,
@@ -11,4 +20,4 @@ const reducers = combineReducers({
     STConfig: STConfigReducer
 })
 
-export default reducers
+export default persistReducer(persistConfig, reducers)

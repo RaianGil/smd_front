@@ -1,5 +1,4 @@
 import TYPES from "../types";
-import { DTConfig } from "../../models/DTConfig";
 
 export const LoadDTConfig = (ConfigDT:any) =>{
     return {

@@ -1,22 +1,17 @@
 import TYPES from "../types"
+import GETServer from "../dispatchs/DTConfigDispatch";
 
-const initState = {
-    ConfigDT: []
-}
-
-const DTConfigReducer = (state = initState, action:any) => {
+const DTConfigReducer = (state = [], action:any) => {
     switch(action.type){
         case TYPES.DELETE_API_DTCONFIG: {
             console.log("Borrado DTConfig")
             return {
-                state,
-                ConfigDT: action.ConfigDT
+                state: action.ConfigDT
             }
         }
         case TYPES.GET_API_DTCONFIG: {
             console.log("Recibiendo DTConfig")
-            return {
-                state: action.ConfigDT }
+            return action.ConfigDT
         }
         case TYPES.POST_API_DTCONFIG: {
             console.log("Agregando DTConfig")
@@ -27,8 +22,9 @@ const DTConfigReducer = (state = initState, action:any) => {
             return ''
         }
         default:
-            return state
+            return null
     }
+    
 }
 
 export default DTConfigReducer
